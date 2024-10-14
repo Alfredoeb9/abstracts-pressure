@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Banner from "../components/Banner.astro";
 ---
 
 <Layout title="Welcome to Abstracts Power Wash">
@@ -46,6 +47,53 @@ import Card from "../components/Card.astro";
               >
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <Banner />
+
+    <!-- Services Gallery -->
+
+    <section class="py-9 bg-white">
+      <div class="container mx-auto text-center px-8">
+        <h2 class="text-4xl font-bold lg:text-5xl pb-3">OUR SERVICES</h2>
+
+        <p class="w-full md:w-[75%] lg:w-[75%] mx-auto">
+          At <span class="font-bold">Abstracts Power Wash</span>, we offer
+          expert power washing solutions to transform your property. From house
+          washing and window cleaning to gutter cleaning, our skilled team
+          delivers exceptional results. Whether you need a deep clean or regular
+          maintenance, we ensure your property is both beatiful and functional.
+          Discover how our services can enchance your outdoor environment.
+        </p>
+
+        <div class="flex gap-4 flex-wrap pt-5">
+          <Card
+            title="HOUSE WASHING"
+            body="Our house washing service is a great way to boost your curb appeal."
+            link="/services/house-washing"
+          />
+          <Card
+            title="CONCRETE CLEANING"
+            body="Our concrete cleaning service will leave your driveway looking brand new."
+            link="/services/concrete-cleaning"
+          />
+          <Card
+            title="RESIDENTIAL WINDOW CLEANING"
+            body="Our window cleaning service will leave your windows sparkling clean."
+            link="/services/residential-window-cleaning"
+          />
+          <Card
+            title="ROOF CLEANING SERVICES"
+            body="Our roof cleaning service will leave your roof looking brand new."
+            link="/services/roof-cleaning"
+          />
+          <Card
+            title="GUTTER CLEANING SERVICES"
+            body="Our gutter cleaning service will leave your gutters flowing."
+            link="/services/gutter-cleaning"
+          />
         </div>
       </div>
     </section>
