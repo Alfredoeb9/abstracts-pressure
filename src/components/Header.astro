@@ -1,0 +1,97 @@
+---
+import Hamburger from "./Hamburger.astro";
+
+const navigation_links = {
+  main: ["Home", "About", "Services"],
+};
+---
+
+<header class="header-navigation bg-[cyan] w-full top-0 right-0 fixed z-[100]">
+  <nav class="nav flex flex-row justify-between items-center text-black p-5">
+    <div>
+      <a href="/" class="text-white text-xl">Abstracts Power Wash</a>
+    </div>
+
+    <Hamburger />
+
+    <ul
+      class="nav-links flex flex-col bg-[cyan] text-white fixed top-0 bottom-0 left-0 right-[18%] text-center items-stretch justify-around z-10 transform: translate-x-[-100%] transition ease-in-out transition-duration-[0.5s] lg:transform-none lg:flex-row lg:relative lg:bg-transparent"
+    >
+      <li class="hover:bg-[cyan]">
+        <a
+          class="inline-block text-2xl lg:text-lg p-[calc(100vh/9)] lg:p-5"
+          href="/">Home</a
+        >
+      </li>
+      <li class="hover:bg-[cyan]">
+        <a
+          class="inline-block text-2xl lg:text-lg p-[calc(100vh/9)] lg:p-5"
+          href="/about">About</a
+        >
+      </li>
+      <li
+        class="services relative inline-block p-[calc(100vh/9)] lg:p-5 hover:bg-[cyan] hover:cursor-pointer"
+      >
+        <span class="text-2xl lg:text-lg">Services</span>
+        <ul
+          class="services-dropdown hidden absolute bg-[cyan] min-w-[135px] h-[200px] top-2 right-[-125px] z-[1] transition ease-in-out transition-duration-[0.5s] lg:right-[-18px] lg:bg-[cyan] lg:top-[64px]"
+        >
+          <a
+            class="text-white h-1/2 py-3 px-4 text-xl flex justify-center items-center hover:bg-[#ddd] hover:text-black lg:text-base"
+            href="/services/residential-services">Residential Services</a
+          >
+          <a
+            class="text-white h-1/2 py-3 px-4 text-xl flex justify-center items-center hover:bg-[#ddd] hover:text-black lg:text-base"
+            href="/services/commerical-services">Commerical Services</a
+          >
+        </ul>
+      </li>
+      <li class="hover:bg-[cyan]">
+        <a
+          href="/contact"
+          class="inline-block text-2xl lg:text-lg p-[90px] lg:p-5">Contact Us</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .expanded {
+    display: block !important;
+    width: 155px !important;
+    height: 300px !important;
+    z-index: 1;
+    visibility: visible !important;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .show {
+    transform: translateX(0) !important;
+  }
+
+  .show_services {
+    display: block;
+  }
+
+  @media screen and (max-width: 636px) {
+    .hamburger {
+      display: block;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+</style>
+
+<script>
+  const service_dropDown = document.querySelector(".services-dropdown");
+
+  document.querySelector(".services")?.addEventListener("click", () => {
+    service_dropDown?.classList.toggle("show_services");
+  });
+
+  document.querySelector("main")?.addEventListener("click", () => {
+    if (service_dropDown?.classList.contains("show_services")) {
+      service_dropDown.classList.remove("show_services");
+    }
+  });
+</script>
