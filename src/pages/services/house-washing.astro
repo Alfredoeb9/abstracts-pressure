@@ -1,0 +1,170 @@
+---
+import Banner from "../../components/Banner.astro";
+import Card from "../../components/Card.astro";
+import Contact from "../../components/Contact.astro";
+// import Contact from "../../components/ContactForm.astro";
+import Layout from "../../layouts/Layout.astro";
+// import mvlandscape from "../../assets/img/mvlandscape.jpg";
+// import plantingService from "../../assets/img/planting-service.jpg";
+// import landscapeDesign from "../../assets/img/landscape-design.jpg";
+// import trimmingService from "../../assets/img/tree-trimming.jpg";
+// import mowingService from "../../assets/img/mowing-and-edging.jpg";
+---
+
+<Layout title="Abstracts Power Wash - Residential Services">
+  <main class="bg-white">
+    <section
+      class="hero-section relative w-full mx-auto py-[200px] bg-center bg-no-repeat bg-cover"
+    >
+      <div class="background-overlay"></div>
+
+      <div
+        class="container flex h-full px-8 items-start flex-wrap mx-auto relative z-50"
+      >
+        <div class="w-full flex items-start relative float-left">
+          <h1 class="text-4xl font-bold">HOUSE WASHING SERVICE</h1>
+        </div>
+
+        <div class="w-[85%] lg:w-[50%] flex items-start relative float-left">
+          <div
+            class="hero_button_container flex pt-14 items-center content-start flex-wrap relative w-full self-stretch"
+          >
+            <div class="w-full lg:w-[90%] flex relative mb-20">
+              <p class="bg-slate-50 bg-opacity-20 font-semibold lg:w-96">
+                We offer a variety of residential services to help you maintain
+                your outdoor space. Our team of professionals are passionate
+                about creating beautiful outdoor spaces.
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <button
+                class="bg-slate-300 rounded-lg py-3 px-5 hover:bg-slate-400 lg:hover:scale-105 transition-all"
+                ><a href="#contact">CONTACT US</a></button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Banner />
+
+    <div class="">
+      <section class="py-10 bg-gunMetal">
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col-reverse flex-wrap lg:flex-row lg:flex-nowrap mx-auto"
+          >
+            <div class="mx-auto py-14 px-20 lg:w-[50%] lg:px-0">
+              <h2 class="text-3xl font-bold pb-5 text-white">
+                Your Professional Power Washing Team
+              </h2>
+
+              <p class="text-white mb-4 pr-10">
+                Abstracts Power Wash is happy to help you in cleaning and
+                restoring various surfaces, including driveways, sidewalks,
+                decks, and building exteriors, using high-pressure water jets.
+                With professional equipment and expertise, they ensure thorough
+                and efficient cleaning, and catering to each clients needs.
+              </p>
+
+              <button
+                class="inline-block font-bold cursor-pointer rounded-full bg-pastelRed px-4 py-3"
+                ><a href="/contact">WORK WITH US</a></button
+              >
+            </div>
+
+            <div class="lg:w-[45%]">
+              <!-- <img
+              src={mvlandscape.src}
+              alt="Residential Services"
+              class="mx-auto"
+            /> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-10">
+        <div class="container mx-auto">
+          <div class="mx-auto py-14 px-20 lg:w-full">
+            <h2 class="text-3xl font-bold pb-5">OUR HOUSE WASH SERVICE</h2>
+
+            <p class="mb-4 lg:pr-20">
+              Our house wash service is designed to thoroughly clean and
+              rejuvenate the exterior of your home, removing dirt, grime, mold,
+              and mildew. Using high-pressure water jets and eco-friendly
+              cleaning solutions, we ensure that your house looks fresh and
+              well-maintained without causing any damage to the surfaces. Trust
+              our experienced team to enhance your home's curb appeal and
+              protect its structural integrity with our professional power
+              washing service.
+            </p>
+
+            <div class="flex gap-4 flex-wrap pt-5">
+              <Card title="House Washing" body="lorem ipsum" />
+              <Card title="Roof Washing" body="lorem ipsum" />
+              <Card title="Window Washing" body="lorem ipsum" />
+              <Card title="Gutter Washing" body="lorem ipsum" />
+              <Card title="Concrete Washing" body="lorem ipsum" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-10 bg-gunMetal lg:py-12">
+        <div class="container mx-auto">
+          <div class="mx-auto px-20 lg:w-full lg:px-0">
+            <h2 class="text-3xl font-bold pb-5 text-center text-white">
+              WHY CHOOSE US?
+            </h2>
+
+            <p class="mb-4 lg:w-[66.6%] lg:mx-auto text-white">
+              Choosing Abstracts Power Wash as your power washing company
+              ensures that you receive top-notch service from a team of
+              dedicated professionals who are passionate about maintaining and
+              enhancing the beauty of your property. We use environmentally
+              friendly cleaning solutions to deliver exceptional results without
+              compromising the integrity of your surfaces. Our commitment to
+              quality workmanship and customer satisfaction guarantees that your
+              project will be completed efficiently, on time, and within budget.
+            </p>
+
+            <button
+              class="inline-block font-bold cursor-pointer rounded-full bg-pastelRed px-4 py-3 lg:block lg:mx-auto"
+              ><a href="/contact">WORK WITH US</a></button
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <Banner />
+
+    <Contact />
+  </main>
+</Layout>
+
+<style>
+  .content {
+    background: pink;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  .trans-test {
+    display: block;
+    width: 400px;
+    height: 40px;
+    visibility: visible;
+    transition: all 0.8s ease-in-out;
+    background: blue;
+  }
+</style>
+
+<script>
+  document.querySelector(".btn-click")?.addEventListener("click", () => {
+    document.querySelector(".content")?.classList.toggle("trans-test");
+  });
+</script>
