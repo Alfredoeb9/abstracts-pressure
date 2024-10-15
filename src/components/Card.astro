@@ -19,11 +19,17 @@ const { title, body, img, imgAlt, link } = Astro.props;
     </h3>
     {img && <img src={img} alt={imgAlt} class="h-40 w-full pt-3" />}
     <p class="text-black py-3 mb-4">{body}</p>
-    <a
-      href={link}
-      class="bg-blue-400 text-white px-2 py-3 font-semibold rounded-2xl"
-      >Learn More</a
-    >
+
+    {
+      link && (
+        <a
+          href={link}
+          class="bg-blue-400 text-white px-2 py-3 font-semibold rounded-2xl"
+        >
+          Learn More
+        </a>
+      )
+    }
   </div>
 </div>
 

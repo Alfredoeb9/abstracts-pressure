@@ -1,6 +1,7 @@
 ---
 import Banner from "../components/Banner.astro";
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="About">
@@ -90,17 +91,32 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <div>
-          <div class="block lg:flex lg:justify-center lg:gap-4">
-            <div class="mb-3 lg:w-[33.3%] text-center">
+          <div class="flex flex-wrap pt-5">
+            <Card
+              title="Quality"
+              body="We are committed to providing the highest quality landscaping services to our clients. Our team of professionals is dedicated to creating beautiful outdoor spaces that are designed to last."
+            />
+
+            <Card
+              title="Customer Service"
+              body="We believe in providing exceptional customer service to our clients. Our team is dedicated to ensuring that our clients are satisfied with the work that we do."
+            />
+
+            <Card
+              title="Reliable Service"
+              body="We understand that our clients rely on us to provide high-quality landscaping services. We are committed to providing reliable service that our clients can depend on."
+            />
+
+            <!-- <div class="mb-3 lg:w-[33.3%] text-center">
               <h3 class="text-2xl font-bold pb-3">Quality</h3>
               <p class="w-[85%] mx-auto lg:w-[85%]">
                 We are committed to providing the highest quality landscaping
                 services to our clients. Our team of professionals is dedicated
                 to creating beautiful outdoor spaces that are designed to last.
               </p>
-            </div>
+            </div> -->
 
-            <div class="mb-3 lg:w-[33.3%] text-center">
+            <!-- <div class="mb-3 lg:w-[33.3%] text-center">
               <h3 class="text-2xl font-bold text-center pb-3">
                 Customer Service
               </h3>
@@ -120,7 +136,7 @@ import Layout from "../layouts/Layout.astro";
                 high-quality landscaping services. We are committed to providing
                 reliable service that our clients can depend on.
               </p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
