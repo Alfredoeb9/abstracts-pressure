@@ -5,9 +5,11 @@ export default {
     extend: {
       backgroundColor: {
         gunMetal: "#353E43",
+        pastelRed: "#FF746C",
       },
       textColor: {
         gunMetal: "#353E43",
+        pastelRed: "#FF746C",
       },
       backgroundImage: {},
     },

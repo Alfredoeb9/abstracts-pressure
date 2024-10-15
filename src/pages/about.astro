@@ -2,6 +2,7 @@
 import Banner from "../components/Banner.astro";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="About">
@@ -145,22 +146,6 @@ import Card from "../components/Card.astro";
     <Banner />
 
     <!-- Contact Us -->
-    <section id="contact" class="py-9">
-      <div class="container mx-auto text-center px-8">
-        <h2 class="text-4xl font-bold lg:text-5xl pb-3 text-black">
-          CONTACT US
-        </h2>
-
-        <p class="w-full text-black md:w-[75%] lg:w-[75%] mx-auto pb-4">
-          Ready to schedule your free estimate? Contact us today to learn more
-          about our services and how we can help you. We look forward to hearing
-          from you!
-        </p>
-
-        <a class="bg-gunMetal text-white px-4 py-3 rounded-lg" href="/contact"
-          >CONTACT US</a
-        >
-      </div>
-    </section>
+    <Contact />
   </main>
 </Layout>

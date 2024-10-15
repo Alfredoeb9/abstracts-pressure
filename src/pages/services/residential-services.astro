@@ -1,5 +1,7 @@
 ---
+import Banner from "../../components/Banner.astro";
 import Card from "../../components/Card.astro";
+import Contact from "../../components/Contact.astro";
 // import Contact from "../../components/ContactForm.astro";
 import Layout from "../../layouts/Layout.astro";
 // import mvlandscape from "../../assets/img/mvlandscape.jpg";
@@ -9,10 +11,10 @@ import Layout from "../../layouts/Layout.astro";
 // import mowingService from "../../assets/img/mowing-and-edging.jpg";
 ---
 
-<Layout title="MVLandscape - Residential Services">
+<Layout title="Abstracts Power Wash - Residential Services">
   <main class="bg-white">
     <section
-      class="hero-section relative w-full mx-auto py-[200px] bg-residential-hero bg-center bg-no-repeat bg-cover"
+      class="hero-section relative w-full mx-auto py-[200px] bg-center bg-no-repeat bg-cover"
     >
       <div class="background-overlay"></div>
 
@@ -38,7 +40,7 @@ import Layout from "../../layouts/Layout.astro";
             <div class="flex gap-3">
               <button
                 class="bg-slate-300 rounded-lg py-3 px-5 hover:bg-slate-400 lg:hover:scale-105 transition-all"
-                ><a href="#contact">Contact Us</a></button
+                ><a href="#contact">CONTACT US</a></button
               >
             </div>
           </div>
@@ -46,102 +48,95 @@ import Layout from "../../layouts/Layout.astro";
       </div>
     </section>
 
-    <div class="container mx-auto">
-      <section class="py-10">
-        <div
-          class="flex flex-col-reverse flex-wrap lg:flex-row lg:flex-nowrap mx-auto"
-        >
-          <div class="mx-auto py-14 px-20 lg:w-[50%] lg:px-0">
-            <h2 class="text-3xl font-bold pb-5">
-              Your Professional Garden Landscaping Team
-            </h2>
+    <Banner />
 
-            <p class="mb-4 pr-10">
-              We are happy to help you perfect your project no matter where you
-              are in the landscaping process. Some of our clients start with a
-              blank slate and little idea of what they want in a final product.
-              Others know exactly what they want. Our job is to take you from an
-              idea to a fully realized project as seamlessly as possible.
-              Sometimes clients just need some minor changes made to an existing
-              project. We are available no matter where you're at in the
-              process.
-            </p>
+    <div class="">
+      <section class="py-10 bg-gunMetal">
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col-reverse flex-wrap lg:flex-row lg:flex-nowrap mx-auto"
+          >
+            <div class="mx-auto py-14 px-20 lg:w-[50%] lg:px-0">
+              <h2 class="text-3xl font-bold pb-5 text-white">
+                Your Professional Garden Landscaping Team
+              </h2>
 
-            <button
-              class="inline-block font-bold cursor-pointer rounded-full bg-[#dfaf4b] px-4 py-3"
-              >WORK WITH US</button
-            >
-          </div>
+              <p class="text-white mb-4 pr-10">
+                We are happy to help you perfect your project no matter where
+                you are in the landscaping process. Some of our clients start
+                with a blank slate and little idea of what they want in a final
+                product. Others know exactly what they want. Our job is to take
+                you from an idea to a fully realized project as seamlessly as
+                possible. Sometimes clients just need some minor changes made to
+                an existing project. We are available no matter where you're at
+                in the process.
+              </p>
 
-          <div class="lg:w-[45%]">
-            <!-- <img
+              <button
+                class="inline-block font-bold cursor-pointer rounded-full bg-pastelRed px-4 py-3"
+                >WORK WITH US</button
+              >
+            </div>
+
+            <div class="lg:w-[45%]">
+              <!-- <img
               src={mvlandscape.src}
               alt="Residential Services"
               class="mx-auto"
             /> -->
+            </div>
           </div>
         </div>
       </section>
 
       <section class="py-10">
-        <div class="mx-auto py-14 px-20 lg:w-full">
-          <h2 class="text-3xl font-bold pb-5">OUR RESIDENTIAL SERVICES</h2>
+        <div class="container mx-auto">
+          <div class="mx-auto py-14 px-20 lg:w-full">
+            <h2 class="text-3xl font-bold pb-5">OUR RESIDENTIAL SERVICES</h2>
 
-          <p class="mb-4 lg:pr-20">
-            We offer a variety of residential services to help you maintain your
-            outdoor space. Our team of professionals are passionate about
-            creating beautiful outdoor spaces. We offer the following services:
-          </p>
+            <p class="mb-4 lg:pr-20">
+              We offer a variety of residential services to help you maintain
+              your outdoor space. Our team of professionals are passionate about
+              creating beautiful outdoor spaces. We offer the following
+              services:
+            </p>
 
-          <div class="flex gap-4 flex-wrap pt-5">
-            <!-- <Card
-              title="Landscaping Design"
-              body="We offer a unique landscaping experience"
-            />
-            <Card
-              title="Planting"
-              body="We offer a unique planting experience"
-            />
-            <Card
-              title="Tree Trimming"
-              body="We offer a unique tree trimming experience"
-              img={trimmingService.src}
-              imgAlt="Image of MVLandscape employee trimming a tree in a front yard"
-            />
-            <Card
-              title="Grass Cutting"
-              body="We offer a unique grass cutting experience"
-              img={mowingService.src}
-              imgAlt="Image of MVLandscape employee mowing and edging a lawn"
-            />
-            <Card
-              title="Outdoor Lighting"
-              body="We offer a unique outdoor lighting experience"
-            />
-            <Card title="And More!" body="We offer a unique experience" /> -->
+            <div class="flex gap-4 flex-wrap pt-5">
+              <Card title="House Washing" body="lorem ipsum" />
+              <Card title="Roof Washing" body="lorem ipsum" />
+              <Card title="Window Washing" body="lorem ipsum" />
+              <Card title="Gutter Washing" body="lorem ipsum" />
+              <Card title="Concrete Washing" body="lorem ipsum" />
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="py-10">
-        <div class="mx-auto px-20 lg:w-full lg:px-0">
-          <h2 class="text-3xl font-bold pb-5 text-center">WHY CHOOSE US?</h2>
+      <section class="py-10 bg-gunMetal">
+        <div class="container mx-auto">
+          <div class="mx-auto px-20 lg:w-full lg:px-0">
+            <h2 class="text-3xl font-bold pb-5 text-center text-white">
+              WHY CHOOSE US?
+            </h2>
 
-          <p class="lg:w-[66.6%] lg:mx-auto">
-            We are a team of professionals who are passionate about creating
-            beautiful outdoor spaces. We take pride in our work and strive to
-            exceed our clients' expectations. We are committed to providing
-            exceptional service and quality workmanship. When you choose us, you
-            can trust that your project will be completed on time and within
-            budget. Contact us today to learn more about our residential
-            services and how we can help you create the outdoor space of your
-            dreams.
-          </p>
+            <p class="lg:w-[66.6%] lg:mx-auto text-white">
+              We are a team of professionals who are passionate about creating
+              beautiful outdoor spaces. We take pride in our work and strive to
+              exceed our clients' expectations. We are committed to providing
+              exceptional service and quality workmanship. When you choose us,
+              you can trust that your project will be completed on time and
+              within budget. Contact us today to learn more about our
+              residential services and how we can help you create the outdoor
+              space of your dreams.
+            </p>
+          </div>
         </div>
       </section>
     </div>
 
-    <!-- <Contact actionForm="../../contact/contactform.php" /> -->
+    <Banner />
+
+    <Contact />
   </main>
 </Layout>
 
