@@ -11,7 +11,11 @@ export default {
         gunMetal: "#353E43",
         pastelRed: "#FF746C",
       },
-      backgroundImage: {},
+      backgroundImage: {
+        "concrete-hero": "url('/src/assets/img/concrete-wash-2.jpg')",
+        "gutter-hero": "url('/src/assets/img/gutter-cleaning-2.jpg')",
+        "home-hero": "url('/src/assets/img/house-wash-1.jpg')",
+      },
     },
   },
   plugins: [],

@@ -4,6 +4,7 @@ import Card from "../../components/Card.astro";
 import Contact from "../../components/Contact.astro";
 // import Contact from "../../components/ContactForm.astro";
 import Layout from "../../layouts/Layout.astro";
+import gutterService from "../../assets/img/gutter-cleaning-1.jpg";
 // import mvlandscape from "../../assets/img/mvlandscape.jpg";
 // import plantingService from "../../assets/img/planting-service.jpg";
 // import landscapeDesign from "../../assets/img/landscape-design.jpg";
@@ -14,7 +15,7 @@ import Layout from "../../layouts/Layout.astro";
 <Layout title="Abstracts Power Wash - Residential Services">
   <main class="bg-white">
     <section
-      class="hero-section relative w-full mx-auto py-[200px] bg-center bg-no-repeat bg-cover"
+      class="hero-section relative w-full mx-auto py-[200px] bg-gutter-hero bg-center bg-no-repeat bg-cover"
     >
       <div class="background-overlay"></div>
 
@@ -29,8 +30,8 @@ import Layout from "../../layouts/Layout.astro";
           <div
             class="hero_button_container flex pt-14 items-center content-start flex-wrap relative w-full self-stretch"
           >
-            <div class="w-full lg:w-[90%] flex relative mb-20">
-              <p class="bg-slate-50 bg-opacity-20 font-semibold lg:w-96">
+            <div class="w-full md:w-[80%] lg:w-[90%] flex relative mb-20">
+              <p class="bg-slate-50 bg-opacity-20 font-semibold md:p-3 lg:w-96">
                 We offer a variety of residential services to help you maintain
                 your outdoor space. Our team of professionals are passionate
                 about creating beautiful outdoor spaces.
@@ -76,11 +77,11 @@ import Layout from "../../layouts/Layout.astro";
             </div>
 
             <div class="lg:w-[45%]">
-              <!-- <img
-              src={mvlandscape.src}
-              alt="Residential Services"
-              class="mx-auto"
-            /> -->
+              <img
+                src={gutterService.src}
+                alt="Residential Services"
+                class="mx-auto"
+              />
             </div>
           </div>
         </div>
