@@ -1,0 +1,183 @@
+---
+import Banner from "../../components/Banner.astro";
+import Card from "../../components/Card.astro";
+import Contact from "../../components/Contact.astro";
+import Layout from "../../layouts/Layout.astro";
+import roofWashing from "../../assets/img/roof-power-wash-2.jpg";
+---
+
+<Layout title="Abstracts Power Wash - House Wash Service">
+  <main class="bg-white">
+    <section
+      class="hero-section relative w-full mx-auto py-[200px] bg-roof-hero bg-center bg-no-repeat bg-cover"
+    >
+      <div class="background-overlay"></div>
+
+      <div
+        class="container flex h-full px-8 items-start flex-wrap mx-auto relative z-50"
+      >
+        <div class="w-full flex items-start relative float-left">
+          <h1 class="text-4xl font-bold">ROOF WASHING SERVICE</h1>
+        </div>
+
+        <div class="w-[85%] lg:w-[65%] flex items-start relative float-left">
+          <div
+            class="hero_button_container flex pt-14 items-center content-start flex-wrap relative w-full self-stretch"
+          >
+            <div class="w-full md:w-[80%] lg:w-[90%] flex relative mb-20">
+              <p class="bg-slate-50 bg-opacity-20 font-semibold md:p-3">
+                Transform your roof with our top-notch power washing service,
+                designed to eliminate dirt, algae, and moss buildup. Our skilled
+                team ensures a thorough and safe cleaning process, enhancing the
+                longevity and appearance of your roof. Trust us to rejuvenate
+                your home's exterior and boost its curb appeal with our reliable
+                and efficient roof washing service.
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <button
+                class="bg-slate-300 rounded-lg py-3 px-5 hover:bg-slate-400 lg:hover:scale-105 transition-all lg:py-4 lg:px-6"
+                ><a class="font-semibold" href="#contact">CONTACT US</a></button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Banner />
+
+    <div class="">
+      <section class="py-10 bg-gunMetal">
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col-reverse flex-wrap lg:flex-row lg:flex-nowrap mx-auto"
+          >
+            <div class="mx-auto py-14 px-20 lg:w-[50%] lg:px-0">
+              <h2 class="text-3xl font-bold pb-5 text-white">
+                Your Professional Power Washing Team
+              </h2>
+
+              <p class="text-white mb-4 pr-10">
+                Abstracts Power Wash is happy to help you in cleaning and
+                restoring various surfaces, including driveways, sidewalks,
+                decks, and building exteriors, using high-pressure water jets.
+                With professional equipment and expertise, they ensure thorough
+                and efficient cleaning, and catering to each clients needs.
+              </p>
+
+              <button
+                class="inline-block font-bold cursor-pointer rounded-full bg-pastelRed px-4 py-3"
+                ><a href="/contact">WORK WITH US</a></button
+              >
+            </div>
+
+            <div class="lg:w-[45%]">
+              <img
+                src={roofWashing.src}
+                alt="A man power washing the roof of a house"
+                class="mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-10">
+        <div class="container mx-auto">
+          <div class="mx-auto py-14 px-20 lg:w-[960px] lg:px-0">
+            <h2 class="text-3xl font-bold pb-5">OUR ROOF WASH SERVICE</h2>
+
+            <p class="mb-4 lg:pr-20">
+              Our roof washing service is designed to eliminate dirt, algae, and
+              moss buildup, ensuring a thorough and safe cleaning process. We
+              use environmentally friendly cleaning solutions to rejuvenate your
+              roof and enhance its longevity and appearance. Trust us to boost
+              your home's curb appeal with our reliable and efficient roof
+              washing service.
+            </p>
+
+            <div class="flex gap-4 flex-wrap pt-5">
+              <Card
+                title="Extend Roof Lifespan"
+                body="Regular power washing removes harmful elements like algae and moss, preventing damage and extending the life of your roof."
+              />
+              <Card
+                title="Improve Curb Appeal"
+                body="A clean roof enhances the overall appearance of your home, making it look well-maintained and attractive."
+              />
+              <Card
+                title="Prevent Costly Repairs"
+                body="By eliminating debris and buildup, power washing helps prevent potential damage that could lead to expensive repairs."
+              />
+              <Card
+                title="Increase Energy Efficiency"
+                body="A clean roof reflects sunlight more effectively, helping to keep your home cooler and reducing energy costs."
+              />
+              <Card
+                title="Health Benefits"
+                body="Removing mold and mildew from your roof can improve the air quality around your home, contributing to a healthier living environment."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-10 bg-gunMetal lg:py-14 lg:h-[550px] lg:flex lg:justify-center lg:items-center"
+      >
+        <div class="container mx-auto">
+          <div class="mx-auto px-20 lg:w-full lg:px-0">
+            <h2 class="text-3xl font-bold pb-5 text-center text-white lg:pb-10">
+              WHY CHOOSE US?
+            </h2>
+
+            <p class="mb-4 lg:w-[66.6%] lg:mx-auto text-white lg:pb-10">
+              Choosing Abstracts Power Wash as your power washing company
+              ensures that you receive top-notch service from a team of
+              dedicated professionals who are passionate about maintaining and
+              enhancing the beauty of your property. We use environmentally
+              friendly cleaning solutions to deliver exceptional results without
+              compromising the integrity of your surfaces. Our commitment to
+              quality workmanship and customer satisfaction guarantees that your
+              project will be completed efficiently, on time, and within budget.
+            </p>
+
+            <button
+              class="inline-block font-bold cursor-pointer rounded-full bg-pastelRed px-4 py-3 lg:block lg:mx-auto"
+              ><a href="/contact">WORK WITH US</a></button
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <Banner />
+
+    <Contact />
+  </main>
+</Layout>
+
+<style>
+  .content {
+    background: pink;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  .trans-test {
+    display: block;
+    width: 400px;
+    height: 40px;
+    visibility: visible;
+    transition: all 0.8s ease-in-out;
+    background: blue;
+  }
+</style>
+
+<script>
+  document.querySelector(".btn-click")?.addEventListener("click", () => {
+    document.querySelector(".content")?.classList.toggle("trans-test");
+  });
+</script>
