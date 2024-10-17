@@ -22,11 +22,14 @@ const { title, body, img, imgAlt, link, isService } = Astro.props;
         itemtype="https://schema.org/Service"
       >
         <h3
-          class="text-black font-semibold text-center text-2xl"
+          class="text-black font-semibold text-center text-2xl pb-3"
           itemprop="name"
         >
           {title}
         </h3>
+
+        <hr />
+
         {img && (
           <img
             src={img}
@@ -51,7 +54,10 @@ const { title, body, img, imgAlt, link, isService } = Astro.props;
       </div>
     ) : (
       <div class="pt-3 pb-6 px-2">
-        <h3 class="text-black font-semibold text-center text-2xl">{title}</h3>
+        <h3 class="text-black font-semibold text-center text-2xl pb-3">
+          {title}
+        </h3>
+        <hr />
         {img && <img src={img} alt={imgAlt} class="h-40 w-full pt-3" />}
         <p class="text-black py-3 mb-4">{body}</p>
 
@@ -69,6 +75,12 @@ const { title, body, img, imgAlt, link, isService } = Astro.props;
 </div>
 
 <style>
+  hr {
+    border: 1px solid #8d8d8d;
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .card {
     background-image: none;
     background-size: 400%;
@@ -76,6 +88,10 @@ const { title, body, img, imgAlt, link, isService } = Astro.props;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease-in-out;
+  }
+
+  .card:is(:hover, :focus-within) hr {
+    border-color: cyan;
   }
   .card:is(:hover, :focus-within) {
     background-position: 0;
