@@ -7,9 +7,14 @@ const { error } = Astro.props;
 ---
 
 <div class="bg-gunMetal h-[100vh]">
-  <div class="flex justify-center items-center h-full">
-    <div class="text-white text-xl font-semibold">
+  <div class="flex flex-col justify-center items-center h-full">
+    <div class="text-white text-4xl lg:text-xl font-semibold mb-5">
       {error instanceof Error ? error.message : "Unknown error"}
+      <a
+        href="/"
+        class="text-3xl px-3 py-3 bg-[cyan] text-black font-semibold lg:px-4 lg:py-4"
+        >Go back Home</a
+      >
     </div>
   </div>
 </div>
