@@ -16,6 +16,7 @@ export default {
         "gutter-hero": "url('/src/assets/img/gutter-cleaning-2.jpg')",
         "home-hero": "url('/src/assets/img/house-wash-1.jpg')",
         "roof-hero": "url('/src/assets/img/roof-power-wash-1.jpg')",
+        "window-hero": "url('/src/assets/img/window-power-wash-1.jpg')",
       },
     },
   },
