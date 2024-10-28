@@ -13,13 +13,14 @@ if(isset($_POST['submit'])) {
     $subject = $_POST['subject'];
     $mailFrom = $_POST['email'];
     $message = $_POST['message'];
+    $ipaddress = $_SERVER['REMOTE_ADDR'];
 
     // Message to me
     //$mailTo = "alfredoeb96@gmail.com":
     $headers = "From: alfredoeb96@gmail.com";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; carset=iso-8859-1\n";
-    $txt = "You have received an e-mail from ".$mailFrom.".\r\n".$subject."\r\n".$message;
+    $txt = "You have received an e-mail from IPADDRESS: ".$ipaddress." \r\n Email: ".$mailFrom.".\r\n Subject: ".$subject."\r\n Message:".$message;
 
     //try {
             //Server settings
@@ -33,9 +34,10 @@ if(isset($_POST['submit'])) {
         $mail->Port       = $_ENV["EMAIL_PORT"];                    // TCP port to connect to
 
         //Recipients
-        $mail->setFrom("test@gmail.com", 'Mailer');
-        $mail->addReplyTo('alfredoeb96@gmail.com', 'Information');
-        $mail->addCC('alfredoeb96@gmail.com');                             // This is needed for production
+        $mail->setFrom("help@abstractspressure.com", 'Abstracts Pressure');
+        $mail->addAddress($mailFrom);
+        $mail->addReplyTo('help@abstractspressure.com', 'Information');
+        $mail->addCC('help@abstractspressure.com');                             // This is needed for production
         //$mail->addBCC('bcc@example.com');
 
         // Attachments
@@ -46,11 +48,13 @@ if(isset($_POST['submit'])) {
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = $subject;
         $mail->Body    = $txt;
-        $mail->AltBody = $txt;
+        // $mail->AltBody = $txt;
 
-        $mail->send();
-        header("Location: /");
-        echo 'Message has been sent';
+        if ($mail->send()) {
+          header("Location: /");
+        } else {
+          echo "Message could not be sent. Mailer Error";
+        }
     //}
     //} catch (Exception $e) {
       //  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
