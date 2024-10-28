@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '/var/www/abstractspressure.com/PHPMailer-master/PHPMailer-master/src/Exception.php';
-require '/var/www/abstractspressure.com/PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
-require '/var/www/abstractspressure.com/PHPMailer-master/PHPMailer-master/src/SMTP.php';
+require '/var/www/abstractspowerwash.com/PHPMailer-master/PHPMailer-master/src/Exception.php';
+require '/var/www/abstractspowerwash.com/PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
+require '/var/www/abstractspowerwash.com/PHPMailer-master/PHPMailer-master/src/SMTP.php';
 
 // Instantiation and passing [ICODE]true[/ICODE] enables exceptions
 $mail = new PHPMailer(true);
@@ -34,7 +34,7 @@ if(isset($_POST['submit'])) {
         $mail->Port       = $_ENV["EMAIL_PORT"];                    // TCP port to connect to
 
         //Recipients
-        $mail->setFrom("help@abstractpw.com", 'Abstracts Pressure');
+        $mail->setFrom("help@abstractpw.com", 'Abstracts Power Wash');
         $mail->addAddress($mailFrom);
         $mail->addReplyTo('help@abstractpw.com', 'Information');
         $mail->addCC('help@abstractpw.com');                             // This is needed for production
