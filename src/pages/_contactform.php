@@ -17,7 +17,7 @@ if(isset($_POST['submit'])) {
 
     // Message to me
     //$mailTo = "alfredoeb96@gmail.com":
-    $headers = "From: alfredoeb96@gmail.com";
+    $headers = "From: ".$mailFrom;
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; carset=iso-8859-1\n";
     $txt = "You have received an e-mail from IPADDRESS: ".$ipaddress." \r\n Email: ".$mailFrom.".\r\n Subject: ".$subject."\r\n Message:".$message;
@@ -34,10 +34,10 @@ if(isset($_POST['submit'])) {
         $mail->Port       = $_ENV["EMAIL_PORT"];                    // TCP port to connect to
 
         //Recipients
-        $mail->setFrom("help@abstractspressure.com", 'Abstracts Pressure');
+        $mail->setFrom("help@abstractpw.com", 'Abstracts Pressure');
         $mail->addAddress($mailFrom);
-        $mail->addReplyTo('help@abstractspressure.com', 'Information');
-        $mail->addCC('help@abstractspressure.com');                             // This is needed for production
+        $mail->addReplyTo('help@abstractpw.com', 'Information');
+        $mail->addCC('help@abstractpw.com');                             // This is needed for production
         //$mail->addBCC('bcc@example.com');
 
         // Attachments
